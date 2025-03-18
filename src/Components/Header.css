@@ -1,0 +1,255 @@
+/* src/Header.css */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.header {
+  background-color: #2a0a5e; /* Darker, vibrant purple */
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Deeper shadow for depth */
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.header-title-container {
+  flex-shrink: 0;
+}
+
+.header-title {
+  font-family: "Orbitron", sans-serif; /* Futuristic font for title */
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: white;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-shadow: 0 0 10px rgba(219, 39, 119, 0.8), /* Pink neon glow */
+               0 0 20px rgba(219, 39, 119, 0.6),
+               0 0 30px rgba(219, 39, 119, 0.4);
+  line-height: 1.2;
+}
+
+.header-subtitle {
+  display: block;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  margin-top: 0.3rem;
+  font-weight: 400;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav-desktop {
+  display: block; /* Show by default */
+}
+
+.nav-desktop ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 1.5rem;
+}
+
+.nav-desktop li {
+  font-family: "Roboto", sans-serif; /* Clean font for nav links */
+  font-size: 1.125rem;
+  font-weight: 400;
+}
+
+.nav-desktop a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+  text-shadow: 0 0 5px rgba(219, 39, 119, 0.5); /* Subtle glow */
+}
+
+.nav-desktop a:hover {
+  color: #f472b6; /* Pink hover color */
+  text-shadow: 0 0 10px rgba(219, 39, 119, 0.8), /* Enhanced glow on hover */
+               0 0 15px rgba(219, 39, 119, 0.6);
+}
+
+.mobile-menu-toggle {
+  display: none; /* Hidden by default on larger screens */
+}
+
+.hamburger {
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+  background: none;
+  border: none;
+  text-shadow: 0 0 5px rgba(219, 39, 119, 0.5); /* Glow for hamburger icon */
+}
+
+.nav-mobile {
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: rgba(74, 42, 138, 0.95); /* Semi-transparent background */
+  padding: 1rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Shadow for mobile menu */
+  text-align: center;
+  z-index: 20;
+  backdrop-filter: blur(10px); /* Adds a glass effect */
+}
+
+.nav-mobile ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.nav-mobile li {
+  font-family: "Roboto", sans-serif; /* Same font for mobile nav */
+  margin: 0.8rem 0;
+  padding-bottom: 0.8rem;
+  border-bottom: 3px solid rgba(255, 255, 255, 0.5); /* White semi-transparent border */
+}
+
+.nav-mobile li:last-child {
+  border-bottom: none;
+}
+
+.nav-mobile a {
+  font-size: 1.25rem;
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+  text-shadow: 0 0 5px rgba(219, 39, 119, 0.5);
+  display: block;
+  padding: 0.5rem;
+}
+
+.nav-mobile a:hover {
+  color: #f472b6;
+  text-shadow: 0 0 10px rgba(219, 39, 119, 0.8),
+               0 0 15px rgba(219, 39, 119, 0.6);
+}
+
+.reviews-icon {
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+  text-shadow: 0 0 5px rgba(219, 39, 119, 0.5);
+}
+
+.reviews-icon:hover {
+  color: #f472b6;
+  text-shadow: 0 0 10px rgba(219, 39, 119, 0.8),
+               0 0 15px rgba(219, 39, 119, 0.6);
+}
+
+/* Responsive Design */
+/* Small screens and up */
+@media (min-width: 640px) {
+  .header-title {
+    font-size: 1.5rem;
+  }
+
+  .header-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .nav-desktop li {
+    font-size: 1.125rem;
+  }
+
+  .reviews-icon {
+    font-size: 1.75rem;
+  }
+}
+
+/* Medium screens and up */
+@media (min-width: 768px) {
+  .header-title {
+    font-size: 1.75rem;
+  }
+
+  .header-subtitle {
+    font-size: 1rem;
+  }
+
+  .nav-desktop li {
+    font-size: 1.25rem;
+  }
+
+  .reviews-icon {
+    font-size: 2rem;
+  }
+}
+
+/* Breakpoint for 800px and down */
+@media (max-width: 800px) {
+  .nav-desktop {
+    display: none; /* Hide desktop nav */
+  }
+
+  .mobile-menu-toggle {
+    display: flex; /* Show hamburger menu */
+  }
+}
+
+.feedback-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feedback-modal {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  min-width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.feedback-container textarea {
+  width: 100%;
+  height: 100px;
+  margin-top: 10px;
+  padding: 10px;
+}
+
+.feedback-container button {
+  margin-top: 10px;
+  padding: 8px 12px;
+  background: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+

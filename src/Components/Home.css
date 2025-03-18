@@ -1,0 +1,50 @@
+/* src/Home.css */
+
+/* Global Reset (from Header.css) */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    overflow-x: hidden;
+  }
+  
+  /* Main container styles */
+  .home-container {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #200d4db6, #6200ff82); /* Dark purple gradient from Header.css */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+    color: white;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Shadow from Header.css */
+  }
+  
+  /* Content container with animation */
+  .home-content {
+    width: 100%;
+    max-width: 1400px; /* Matches Header.css max-width */
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem; /* Space between sections */
+  }
+  
+  /* Responsive styles (aligned with Header.css breakpoints) */
+  @media (max-width: 800px) {
+    .home-content {
+      padding: 1.5rem;
+      gap: 1.5rem;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .home-content {
+      padding: 1rem;
+      gap: 1rem;
+    }
+  }

@@ -1,0 +1,149 @@
+/* MainGuest.css */
+.main-guest-section {
+    padding: 4rem 2rem;
+    background-color: rgba(37, 16, 79, 0.803);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .section-title {
+    font-family: "Orbitron", sans-serif;
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 3rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 0 0 15px rgba(219, 39, 119, 0.7);
+    position: relative;
+  }
+  
+  .section-title::after {
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(90deg, rgba(219, 39, 119, 0.2), rgba(219, 39, 119, 0.8), rgba(219, 39, 119, 0.2));
+    border-radius: 2px;
+  }
+  
+  .guests-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2.5rem;
+    width: 100%;
+    max-width: 1200px;
+  }
+  
+  .guest-card {
+    background: linear-gradient(145deg, rgba(42, 10, 94, 0.6), rgba(21, 5, 51, 0.8));
+    border-radius: 12px;
+    overflow: hidden;
+    width: 300px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .guest-image-container {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .guest-image-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(0deg, rgba(42, 10, 94, 1), transparent);
+    opacity: 0.3;
+    transition: opacity 0.3s ease;
+  }
+  
+  .guest-card:hover .guest-image-container::after {
+    opacity: 0.5;
+  }
+  
+  .guest-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+  
+  .guest-info {
+    padding: 1.5rem;
+    color: white;
+  }
+  
+  .guest-info h2 {
+    font-family: "Orbitron", sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+    text-shadow: 0 0 5px rgba(219, 39, 119, 0.5);
+  }
+  
+  .guest-info p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    opacity: 0.9;
+  }
+  
+  /* Hover effects */
+  .guest-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+  }
+  
+  .guest-card:hover img {
+    transform: scale(1.05);
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .guests-container {
+      gap: 2rem;
+    }
+    
+    .guest-card {
+      width: 100%;
+      max-width: 350px;
+    }
+    
+    .section-title {
+      font-size: 2rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .main-guest-section {
+      padding: 3rem 1rem;
+    }
+    
+    .section-title {
+      font-size: 1.75rem;
+    }
+    
+    .guest-image-container {
+      height: 250px;
+    }
+    
+    .guest-info h2 {
+      font-size: 1.25rem;
+    }
+    
+    .guest-info p {
+      font-size: 0.9rem;
+    }
+  }

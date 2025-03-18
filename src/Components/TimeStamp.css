@@ -1,0 +1,196 @@
+/* TimeStamp.css */
+/* TimeStamp.css */
+.timestamp-container {
+    width: 100%;
+    padding: 3rem 1rem;
+    /* background: linear-gradient(135deg, rgba(37, 16, 79, 0.5), rgba(37, 16, 79, 0.7), rgba(37, 16, 79, 0.9)); */
+    background-color: rgba(37, 16, 79, 0.803);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+  }
+  
+  .countdown-wrapper {
+    width: 100%;
+    max-width: 900px;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .event-details {
+    text-align: center;
+    margin-bottom: 2rem;
+    width: 100%;
+  }
+  
+  .event-title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    background: linear-gradient(90deg, #ff8a00, #e52e71);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+  }
+  
+  .event-info {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+  }
+  
+  .info-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 0.5rem 1rem;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+  }
+  
+  .info-item:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-3px);
+  }
+  
+  .info-icon {
+    font-size: 1.4rem;
+  }
+  
+  .countdown-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 1.5rem;
+    position: relative;
+  }
+  
+  .countdown-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(90deg, #ff8a00, #e52e71);
+    border-radius: 2px;
+  }
+  
+  .countdown-units {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 700px;
+  }
+  
+  .countdown-unit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 80px;
+    position: relative;
+  }
+  
+  .count-value {
+    font-size: 3rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #f6d365, #fda085);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding: 0.5rem;
+    border-radius: 8px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 255, 255, 0.05);
+    width: 100%;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .count-value::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    transform: skewX(-20deg) translateX(-100%);
+    animation: shimmer 3s infinite;
+  }
+  
+  @keyframes shimmer {
+    0% {
+      transform: skewX(-20deg) translateX(-100%);
+    }
+    100% {
+      transform: skewX(-20deg) translateX(200%);
+    }
+  }
+  
+  .count-label {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.7;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .event-title {
+      font-size: 2.5rem;
+    }
+    
+    .countdown-units {
+      gap: 1rem;
+    }
+    
+    .count-value {
+      font-size: 2.5rem;
+      min-width: 70px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .event-title {
+      font-size: 2rem;
+    }
+    
+    .countdown-units {
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+    
+    .countdown-unit {
+      min-width: 40%;
+    }
+    
+    .count-value {
+      font-size: 2rem;
+    }
+    
+    .info-item {
+      padding: 0.4rem 0.8rem;
+      font-size: 1rem;
+    }
+  }
