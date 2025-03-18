@@ -1,12 +1,18 @@
-# React + Vite
+# Futuristic Tech Fest
+A modern, AI-powered website for Axis25, VNIT’s futuristic tech fest, built for the Web Reshape competition.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Features**
+- Home Page: Overview of Axis25 with engaging UI/UX.
+- Guest Speakers: Information about key speakers at the fest.
+- Event Timeline: Interactive schedule of tech events & workshops.
+- AI Chatbot: AI-powered assistant for user queries.
+- Feedback & Updates: Section for real-time feedback & announcements.
+- Dynamic Themes: Theme changes based on time of day.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**Tech Stack**
+- Frontend: React.js, Tailwind CSS
+- AI Chatbot: Integrated using [mention API or tech used]
+- Animations & UI Enhancements: Framer Motion, GSAP
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+**Live Demo**: https://axis25-fest.netlify.app/
